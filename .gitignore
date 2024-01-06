@@ -1,5 +1,5 @@
 # Editor directories and files
 .vscode/*
 
-#Mac/OSX
+# Mac/OSX
 .DS_Store
