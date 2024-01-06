@@ -1,0 +1,23 @@
+/* Reset default styles and set 100% height and width */
+html,
+body,
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Set a fixed width for the infoDiv and panelDiv elements and styling for flex container within calcite-block-footer */
+#panelDiv,
+#infoDiv,
+.footer-container {
+    width: 100%;
+}
+
+/* Styling for flex container within calcite-block-footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0 !important;
+}

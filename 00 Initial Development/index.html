@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>Rowing application</title>
+    <!-- Calcite Components CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://js.arcgis.com/calcite-components/1.9.2/calcite.css"
+    />
+    <!-- Load the ArcGIS Maps SDK for JavaScript -->
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.28/esri/themes/light/main.css"
+    />
+    <!-- Reference to external CSS file -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Map Container -->
+    <div id="viewDiv"></div>
+
+    <!-- Calcite Panel for UI Elements -->
+    <div id="panelDiv">
+      <calcite-panel id="infoDiv" heading="Options">
+        <!-- Block for New Row Record -->
+        <calcite-block
+          id="recordBlock"
+          collapsible
+          heading="New Row Record"
+          description="Add a new rowing session record"
+        >
+          <!-- Input for Distance -->
+          <calcite-label>
+            Distance
+            <calcite-input-number
+              id="distanceInput"
+              placeholder="Distance rowed in meters"
+              number-button-type="none"
+              step="any"
+            ></calcite-input-number>
+          </calcite-label>
+
+          <!-- Input for Date -->
+          <calcite-label
+            >Date
+            <calcite-input-date-picker
+              id="datePickerInput"
+              overlay-positioning="fixed"
+              placement="bottom-start"
+            ></calcite-input-date-picker>
+          </calcite-label>
+
+          <!-- Footer container for buttons -->
+          <calcite-block-footer class="footer-container">
+            <!-- Clear Button -->
+            <calcite-button
+              id="clearButton"
+              width="half"
+              appearance="outline"
+              disabled
+              >Clear</calcite-button
+            >
+            <!-- Submit Button -->
+            <calcite-button id="submitButton" width="half" disabled
+              >Submit</calcite-button
+            >
+          </calcite-block-footer>
+        </calcite-block>
+
+        <!-- Placeholder Block for Future Functionality -->
+        <calcite-block
+          collapsible
+          heading="Placeholder"
+          description="Functionality to be added at a later date"
+        ></calcite-block>
+      </calcite-panel>
+    </div>
+
+    <!-- Load Calcite Components and ArcGIS API Scripts -->
+    <script
+      type="module"
+      src="https://js.arcgis.com/calcite-components/1.9.2/calcite.esm.js"
+    ></script>
+    <script src="https://js.arcgis.com/4.28/"></script>
+
+    <!-- reference to JS file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
